@@ -1,10 +1,15 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import './CharacterItem.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { setModalActive } from '../../redux/actions/modalActive';
 
 function CharacterItem({ item }) {
+  const dispatch = useDispatch();
+  const modalActive = useSelector((state) => state.modalActive);
+
   return (
-    <div className="character__card">
+    <div className="character__card" onClick={(e) => dispatch(setModalActive(true))}>
 
       <div className="character__card__information-name">
         {item.name}

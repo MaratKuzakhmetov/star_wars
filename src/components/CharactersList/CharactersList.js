@@ -23,8 +23,6 @@ function CharactersList() {
     }
   }, [characters.length, page]);
 
-  // console.log('slicedCharacters', slicedCharacters);
-
   return (
     <div className="characters__wrapper">
       <div>
