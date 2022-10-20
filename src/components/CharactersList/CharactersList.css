@@ -1,0 +1,115 @@
+.characters__title {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: 3px;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 792.35px;
+  height: 43.51px;
+  margin: 0 auto;
+  margin-top: 73px;
+}
+
+.characters__input {
+  background: #F2F2F2;
+  border-radius: 40px;
+  width: 1094px;
+  height: 56px;
+  margin-top: 36px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
+}
+
+.characters__input::placeholder {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.characters__input[type='text'] {
+  padding: 4px 31px;
+}
+
+.characters__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1152px;
+  margin: 102px auto 0;
+  max-height: 500.69px;
+  justify-content: space-between;
+}
+
+.characters__pages {
+  display: flex;
+  justify-content: center;
+  margin-top: 30.5px;
+}
+
+.characters__pages-page {
+  margin-right: 15px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.characters__pages-page:hover {
+  background: black;
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.characters__pages-page:last-of-type {
+  margin-right: 0;
+}
+
+.big {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #212121;
+}
+
+.medium {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #212121;
+}
+
+.small {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #212121;
+}
+
+.characters-btn-wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.characters__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  background: #F28F16;
+  border-radius: 50%;
+  z-index: 3;
+  margin-right: 75px;
+  margin-bottom: 75px;
+}
+
+.characters__button:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transform: rotate(15deg);
+  transition: all 1s ease-in;
+}

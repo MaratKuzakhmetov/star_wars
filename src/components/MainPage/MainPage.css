@@ -1,0 +1,115 @@
+.main {
+  background: linear-gradient(180deg, #1F2A63 0%, #17002F 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 157px;
+  max-width: 517px;
+  max-height: 557px;
+}
+
+.main__intro__title {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 84px;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+  max-width: 506px;
+  max-height: 252px;
+  text-align: left;
+  margin-top: 128px;
+}
+
+.main__intro__subtitle {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  color: #FFFFFF;
+  max-width: 515px;
+  max-height: 111px;
+  text-align: left;
+  margin-top: 64px;
+}
+
+.main__intro__btn {
+  width: 231px;
+  height: 66px;
+  background: #FFC107;
+  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  margin-top: 64px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 27px;
+  color: #212121;
+}
+
+.main__images {
+  position: relative;
+  width: 600px;
+  height: 678px;
+  padding-top: 107px;
+}
+
+.main__images-avatar {
+  position: absolute;
+  left: 0%;
+  right: 13.68%;
+  top: 14.99%;
+  bottom: -1.31%;
+  transform: matrix(0.98, -0.17, 0.17, 0.98, 0, 0);
+  z-index: 2;
+}
+
+.main__images-cloud-small {
+  position: absolute;
+  left: 0%;
+  right: 67.31%;
+  top: 75.22%;
+  bottom: 0%;
+  box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+  z-index: 1;
+}
+
+.main__images-cloud-big {
+  position: absolute;
+  left: 49.86%;
+  right: 0%;
+  top: 0%;
+  bottom: 61.96%;
+  box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+  z-index: 1;
+}
+
+.yoda {
+  width: 600px;
+}
+
+/* @media (max-width: 1106px) {
+  .main__intro__title {
+    font-size: 62px;
+    line-height: 84px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 0px;
+  }
+
+  .main__intro__subtitle {
+    font-size: 22px;
+    line-height: 37px;
+    color: #ffffff;
+  }
+} */

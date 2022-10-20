@@ -1,0 +1,130 @@
+.character__card {
+  position: relative;
+  width: 351.9px;
+  height: 136.86px;
+  margin-bottom: 45px;
+  background: #F0F0F0;
+  border-radius: 8px;
+  filter: drop-shadow(4px 4px 4px rgba(33, 33, 33, 0.1));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.character__card__information-name {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #212121;
+  text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+  margin-top: 5.29px;
+  margin-left: 25.95px;
+}
+
+.character__card__information-dimensions {
+  margin-top: 12.1px;
+  margin-left: 28.38px;
+}
+
+.character__card__information-dimensions-circles {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.character__card__information-dimensions-circle {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: 3px solid #212121;
+  margin-right: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character__card__information-dimensions-circle:last-of-type {
+  margin-right: 0px;
+}
+
+.character__card__information-dimensions-circle-text {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #212121;
+}
+
+.character__card__information-dimensions-values {
+  margin-top: 5.94px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.character__card__information-dimensions-value {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #4B4B4B;
+  margin-right: 16.57px;
+}
+
+.character__card__information-dimensions-value:last-of-type {
+  margin-right: 0px;
+}
+
+.character__card__information-personal {
+  margin-top: 10.95px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 25.95px;
+}
+
+.character__card__information-personal-sex {
+  min-width: 60px;
+  min-height: 16px;
+  /* background: #73D677; */
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  margin-right: 13px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #212121;
+}
+
+.male {
+  background: #73D677;
+}
+
+.female {
+  background: #C956FF;
+}
+
+.other {
+  background: #F5DB13;
+}
+
+.character__card__information-personal-birthdate {
+  width: 60px;
+  height: 16px;
+  background: #07D6F2;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #212121;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
