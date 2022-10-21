@@ -1,0 +1,172 @@
+.modal__wrapper {
+  display: flex;
+}
+
+.modal__wrapper__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 364px;
+  background: #1F2A63;
+  box-shadow: 4px 4px 8px rgba(1, 28, 64, 0.2);
+  height: 371px;
+  margin-top: -2px;
+  margin-left: -2px;
+  border-radius: 12px 0px 0px 12px;
+}
+
+.modal__wrapper__info-pic {
+  margin-top: 16px;
+}
+
+.modal__wrapper__info-data {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: flex-end;
+  margin-right: 17px;
+}
+
+.character__card__information-personal {
+  margin-top: 10.95px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 25.95px;
+}
+
+.character__card__information-personal-sex {
+  min-width: 60px;
+  min-height: 16px;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  margin-right: 13px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #212121;
+}
+
+.male {
+  background: #73D677;
+}
+
+.female {
+  background: #C956FF;
+}
+
+.other {
+  background: #F5DB13;
+  min-width: 94px;
+}
+
+.character__card__information-personal-birthdate {
+  width: 60px;
+  height: 16px;
+  background: #07D6F2;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #212121;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modal__wrapper__data {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #17002F 42.19%, #1F2A63 100%);
+  border-radius: 0px 12px 12px 0px;
+  width: 436px;
+  margin-top: -2px;
+  margin-right: -2px;
+}
+
+.modal__wrapper__data-name {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+  margin-left: 13px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #FDFDFD;
+  text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+}
+
+.modal__wrapper__data-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 264px;
+  height: 104px;
+  background: #FDFDFD;
+  box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+  border-radius: 8px;
+  margin-top: 23px;
+  margin-left: 15px;
+}
+
+.modal__wrapper__data-info p {
+  margin-left: 23px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.modal__wrapper__data-dimensions {
+  display: flex;
+  margin-top: 77px;
+  margin-left: 15px;
+}
+
+.modal__wrapper__data-dimensions-size {
+  width: 82px;
+  height: 70px;
+  background: #FDFDFD;
+  box-shadow: 4px 4px 24px rgba(1, 17, 38, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 23px;
+}
+
+.modal__wrapper__data-dimensions-size:last-of-type {
+  margin-right: 0;
+}
+
+.modal__wrapper__data-dimensions-size-circle {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: 3px solid #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.modal-value {
+  margin-top: 6px;
+}
+
+.modal-value-text {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #4B4B4B;
+}

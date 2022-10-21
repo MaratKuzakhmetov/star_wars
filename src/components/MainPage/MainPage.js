@@ -14,7 +14,7 @@ function MainPage() {
         <h2 className="main__intro__subtitle">
           You can find out all the information about your favorite characters
         </h2>
-        <Link to="/characters">
+        <Link to="/characters" className="link">
           <button type="button" className="main__intro__btn">
             See more...
           </button>

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CharacterItem from '../CharacterItem/CharacterItem';
+import { getFilteredCharacters } from '../../redux/actions/characters';
 import './CharactersList.css';
 
 function CharactersList() {
@@ -11,10 +12,12 @@ function CharactersList() {
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   const characters = useSelector((state) => state.characters);
+  const dispatch = useDispatch();
 
   const handleSearch = (event) => {
     const searchedValue = event.target.value;
     setFilterValue(searchedValue);
+    dispatch(getFilteredCharacters(filterValue));
   };
 
   useEffect(() => {

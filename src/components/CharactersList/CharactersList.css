@@ -9,9 +9,8 @@
   color: #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   max-width: 792.35px;
-  height: 43.51px;
   margin: 0 auto;
-  margin-top: 73px;
+  padding-top: 73px;
 }
 
 .characters__input {
@@ -50,6 +49,7 @@
   display: flex;
   justify-content: center;
   margin-top: 30.5px;
+  padding-bottom: 34px;
 }
 
 .characters__pages-page {
@@ -93,6 +93,9 @@
 .characters-btn-wrapper {
   display: flex;
   justify-content: end;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
 
 .characters__button {
@@ -104,8 +107,6 @@
   background: #F28F16;
   border-radius: 50%;
   z-index: 3;
-  margin-right: 75px;
-  margin-bottom: 75px;
 }
 
 .characters__button:hover {

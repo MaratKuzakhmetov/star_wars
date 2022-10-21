@@ -5,11 +5,9 @@ import NavBar from './components/NavBar/NavBar';
 import MainPage from './components/MainPage/MainPage';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import CharactersPage from './components/CharactersPage/CharactersPage';
-import Modal from './components/Modal/Modal';
 
 function App() {
   const path = useLocation();
-  const [modalActive, setModalActive] = useState(true);
   return (
     <div className="App">
       {(path.pathname === '/' || path.pathname === '/characters') && <NavBar />}
@@ -33,7 +31,6 @@ function App() {
           )}
         />
       </Routes>
-      <Modal active={modalActive} setActive={setModalActive} />
     </div>
   );
 }

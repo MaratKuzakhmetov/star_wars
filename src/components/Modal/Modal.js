@@ -1,17 +1,20 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setModalActive } from '../../redux/actions/modalActive';
+import ModalCharacter from '../ModalCharacter/ModalCharacter';
 import './Modal.css';
 
-function Modal() {
-  const dispatch = useDispatch();
-  const modalActive = useSelector((state) => state.modalActive);
-
-  return (
-    <div className={modalActive ? 'modal active' : 'modal'} onClick={(e) => dispatch(setModalActive(false))}>
-      <div className={modalActive ? 'modal__content active' : 'modal__content'} onClick={(e) => e.stopPropagation()} />
+function Modal({ item, shown, close }) {
+  return shown ? (
+    <div className="modal-backdrop" onClick={(e) => close()}>
+      <div className="modal__btn">
+        <div className="modal__btn-close" onClick={(e) => close()}>
+          <img src="./img/svg/close.svg" alt="close-icon" className="btn-image" />
+        </div>
+      </div>
+      <div className="modal-content" onClick={(e) => { e.stopPropagation(); }}>
+        <ModalCharacter item={item} />
+      </div>
     </div>
-  );
+  ) : null;
 }
 
 export default Modal;

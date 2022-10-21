@@ -477,6 +477,8 @@ textarea {
 
 .App {
   text-align: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #1F2A63 0%, #17002F 100%);
 }
 
 .App-logo {
