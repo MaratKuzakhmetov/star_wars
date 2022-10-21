@@ -41,7 +41,7 @@
   flex-wrap: wrap;
   max-width: 1152px;
   margin: 102px auto 0;
-  max-height: 500.69px;
+  /* max-height: 500.69px; */
   justify-content: space-between;
 }
 
@@ -93,7 +93,7 @@
 .characters-btn-wrapper {
   display: flex;
   justify-content: end;
-  position: absolute;
+  position: fixed;
   bottom: 25px;
   right: 25px;
 }

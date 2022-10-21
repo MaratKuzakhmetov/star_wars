@@ -3,28 +3,57 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CharacterItem from '../CharacterItem/CharacterItem';
-import { getFilteredCharacters } from '../../redux/actions/characters';
 import './CharactersList.css';
+
+const filterData = (filterValue, characters) => {
+  if (!filterValue) {
+    return characters;
+  }
+  return characters.filter((item) => item.name.toLowerCase().includes(filterValue.toLowerCase()));
+};
 
 function CharactersList() {
   const [filterValue, setFilterValue] = useState('');
   const [slicedCharacters, setSlicedCharacters] = useState([]);
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
   const [page, setPage] = useState(1);
-  const [pages, setPages] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  const [pages, setPages] = useState([]);
   const characters = useSelector((state) => state.characters);
   const dispatch = useDispatch();
-
-  const handleSearch = (event) => {
-    const searchedValue = event.target.value;
-    setFilterValue(searchedValue);
-    dispatch(getFilteredCharacters(filterValue));
-  };
 
   useEffect(() => {
     if (characters.length === 82) {
       setSlicedCharacters(characters.slice((page - 1) * 9, page * 9));
     }
   }, [characters.length, page]);
+
+  useEffect(() => {
+    const Debounce = setTimeout(() => {
+      const filteredData = filterData(filterValue, characters);
+      setFilteredCharacters(filteredData.slice((page - 1) * 9, page * 9));
+    }, 500);
+
+    return () => clearTimeout(Debounce);
+  }, [filterValue, page]);
+
+  const handleSearch = (event) => {
+    const searchedValue = event.target.value;
+    setFilterValue(searchedValue);
+  };
+
+  useEffect(() => {
+    const totalPages = filterValue ? Math.ceil(filteredCharacters.length / 9) : Math.ceil(characters.length / 9);
+    console.log('Total Pages', totalPages);
+    const pagesQty = [];
+    setPages(pagesQty);
+    for (let i = 0; i < totalPages; i += 1) {
+      pagesQty.push(i + 1);
+    }
+    setPages(pagesQty);
+  }, [filteredCharacters.length]);
+
+  console.log('pages', pages);
+  console.log('filter', filteredCharacters.length);
 
   return (
     <div className="characters__wrapper">
@@ -38,7 +67,9 @@ function CharactersList() {
       </div>
 
       <div className="characters__list">
-        {slicedCharacters.map((item, index) => <CharacterItem key={index * Math.random() * 100} item={item} />)}
+        {filterValue.length === 0
+          ? slicedCharacters.map((item, index) => <CharacterItem key={index * Math.random() * 100} item={item} />)
+          : filteredCharacters.map((item, index) => <CharacterItem key={index * Math.random() * 100} item={item} />)}
       </div>
 
       <div className="characters__pages">
