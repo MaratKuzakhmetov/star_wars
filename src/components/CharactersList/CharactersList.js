@@ -16,21 +16,25 @@ function CharactersList() {
   const [filterValue, setFilterValue] = useState('');
   const [slicedCharacters, setSlicedCharacters] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const [slicedFilteredCharacters, setSlicedFilteredCharacters] = useState([]);
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState([]);
   const characters = useSelector((state) => state.characters);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (filterValue) {
+      setSlicedFilteredCharacters(filteredCharacters.slice((page - 1) * 9, page * 9));
+    }
     if (characters.length === 82) {
       setSlicedCharacters(characters.slice((page - 1) * 9, page * 9));
     }
-  }, [characters.length, page]);
+  }, [filteredCharacters, characters.length, page]);
 
   useEffect(() => {
     const Debounce = setTimeout(() => {
       const filteredData = filterData(filterValue, characters);
-      setFilteredCharacters(filteredData.slice((page - 1) * 9, page * 9));
+      setFilteredCharacters(filteredData);
     }, 500);
 
     return () => clearTimeout(Debounce);
@@ -43,7 +47,6 @@ function CharactersList() {
 
   useEffect(() => {
     const totalPages = filterValue ? Math.ceil(filteredCharacters.length / 9) : Math.ceil(characters.length / 9);
-    console.log('Total Pages', totalPages);
     const pagesQty = [];
     setPages(pagesQty);
     for (let i = 0; i < totalPages; i += 1) {
@@ -51,9 +54,6 @@ function CharactersList() {
     }
     setPages(pagesQty);
   }, [filteredCharacters.length]);
-
-  console.log('pages', pages);
-  console.log('filter', filteredCharacters.length);
 
   return (
     <div className="characters__wrapper">
@@ -69,7 +69,7 @@ function CharactersList() {
       <div className="characters__list">
         {filterValue.length === 0
           ? slicedCharacters.map((item, index) => <CharacterItem key={index * Math.random() * 100} item={item} />)
-          : filteredCharacters.map((item, index) => <CharacterItem key={index * Math.random() * 100} item={item} />)}
+          : slicedFilteredCharacters.map((item, index) => <CharacterItem key={index * Math.random() * 100} item={item} />)}
       </div>
 
       <div className="characters__pages">
