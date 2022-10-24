@@ -162,5 +162,7 @@
 
   .character__card:nth-child(3n+1) {
     margin-left: 0;
+    min-width: 50%;
+    max-width: 75%;
   }
 }
