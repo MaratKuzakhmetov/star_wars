@@ -7,7 +7,7 @@ function ModalCharacter({ item }) {
     <div className="modal__wrapper">
       <div className="modal__wrapper__info">
         <div className="modal__wrapper__info-pic">
-          <img src={(item.gender !== 'n/a' && item.gender !== 'none') ? `./img/svg/${item.gender}.png` : './img/svg/robot.png'} alt="gender_image" />
+          <img className="modal-img" src={(item.gender !== 'n/a' && item.gender !== 'none') ? `./img/svg/${item.gender}.png` : './img/svg/robot.png'} alt="gender_image" />
         </div>
         <div className="modal__wrapper__info-data">
           {(item.gender !== 'n/a' && item.gender !== 'none') && (

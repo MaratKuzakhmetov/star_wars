@@ -93,7 +93,6 @@
 .character__card__information-personal-sex {
   min-width: 60px;
   min-height: 16px;
-  /* background: #73D677; */
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
   border-radius: 11px;
   margin-right: 13px;
@@ -132,4 +131,36 @@
   text-align: center;
   color: #212121;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Tablet */
+@media (min-width: 958px) and (max-width: 1199px) {
+  .character__card {
+    width: 275px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 957px) {
+  .character__card {
+    width: 222px;
+  }
+}
+
+/* Phone */
+@media (min-width: 600px) and (max-width: 749px) {
+  .character__card {
+    width: 170px;
+  }
+}
+
+@media (max-width: 599px) {
+  .character__card {
+    min-width: 50%;
+    max-width: 75%;
+    margin-left: 0;
+  }
+
+  .character__card:nth-child(3n+1) {
+    margin-left: 0;
+  }
 }

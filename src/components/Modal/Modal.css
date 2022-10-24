@@ -39,3 +39,27 @@
   transform: scale(1.1) rotate(-15deg);
   transition: all 1s ease-in;
 }
+
+/* Tablet */
+@media (min-width: 660px) and (max-width: 850px) {
+  .modal-content {
+    height: 371px;
+    width: 80%;
+  }
+
+  .modal__btn {
+    width: 80%;
+  }
+}
+
+/* Phone */
+@media (max-width: 659px) {
+  .modal-content {
+    height: 50%;
+    width: 80%;
+  }
+
+  .modal__btn {
+    width: 80%;
+  }
+}
