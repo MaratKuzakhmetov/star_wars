@@ -1,3 +1,10 @@
+.characters__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90.5%;
+}
+
 .characters__title {
   font-family: 'Karla';
   font-style: normal;
@@ -18,7 +25,7 @@
   border-radius: 40px;
   width: 1094px;
   height: 56px;
-  margin-top: 36px;
+  margin: 36px auto 0;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
 }
@@ -42,14 +49,16 @@
   max-width: 1152px;
   margin: 102px auto 0;
   /* max-height: 500.69px; */
-  justify-content: space-between;
 }
 
 .characters__pages {
+  position: fixed;
   display: flex;
   justify-content: center;
-  margin-top: 30.5px;
-  padding-bottom: 34px;
+  align-items: flex-end;
+  height: 100%;
+  bottom: 2%;
+  left: 45%;
 }
 
 .characters__pages-page {

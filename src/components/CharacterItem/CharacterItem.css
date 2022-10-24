@@ -1,5 +1,4 @@
 .character__card {
-  position: relative;
   width: 351.9px;
   height: 136.86px;
   margin-bottom: 45px;
@@ -9,6 +8,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-left: 35px;
+}
+
+.character__card:nth-child(3n+1) {
+  margin-left: 0;
 }
 
 .character__card__information-name {

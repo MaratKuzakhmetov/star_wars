@@ -57,7 +57,7 @@ function CharactersList() {
 
   return (
     <div className="characters__wrapper">
-      <div>
+      <div className="characters__wrapper-header">
         <h1 className="characters__title">
           {characters.length}
           {' '}
