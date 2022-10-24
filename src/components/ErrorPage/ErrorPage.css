@@ -1,12 +1,17 @@
 .error {
   background-color: #17002F;
   width: 100wv;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .error__container {
   position: relative;
-  padding: 96px 81px;
+  margin: 0 auto;
+  padding: 96px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .error__container__text {
@@ -15,8 +20,7 @@
   font-weight: 700;
   font-size: 700px;
   line-height: 818px;
-  display: flex;
-  align-items: center;
+  display: inline-block;
   letter-spacing: 4px;
   color: rgba(255, 255, 255, 0.5);
   max-width: 1277px;
@@ -25,13 +29,11 @@
 }
 
 .error__container__image-img {
-  width: 690px;
-  height: 623px;
   position: absolute;
-  left: 26.04%;
-  right: 26.04%;
+  max-width: 690px;
+  max-height: 623px;
   top: 11.72%;
-  bottom: 27.44%;
+  z-index: 2;
 }
 
 .error__container__btn-btn {
@@ -46,4 +48,44 @@
   font-weight: 700;
   font-size: 23px;
   line-height: 27px;
+  margin: 120px auto 0;
+}
+
+/* Tablet */
+@media (min-width: 680px) and (max-width: 1300px) {
+  .error__container__text {
+    font-size: 350px;
+    line-height: 450px;
+  }
+
+  .error__container__image-img {
+    width: 400px;
+    top: 8%;
+  }
+}
+
+/* Phone and Tablet */
+@media (min-width: 425px) and (max-width: 679px) {
+  .error__container__text {
+    font-size: 220px;
+    line-height: 450px;
+  }
+
+  .error__container__image-img {
+    width: 220px;
+    top: 20%;
+  }
+}
+
+/* Phone */
+@media (max-width: 424px) {
+  .error__container__text {
+    font-size: 150px;
+    line-height: 450px;
+  }
+
+  .error__container__image-img {
+    width: 150px;
+    top: 25%;
+  }
 }

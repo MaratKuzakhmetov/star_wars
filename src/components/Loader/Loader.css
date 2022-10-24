@@ -1,0 +1,23 @@
+.loader {
+  height: 20vmin;
+  width: 20vmin;
+  pointer-events: none;
+  border-radius: 50%;
+  margin: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .loader {
+    animation: loader-spin infinite 1s linear;
+  }
+}
+
+@keyframes loader-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

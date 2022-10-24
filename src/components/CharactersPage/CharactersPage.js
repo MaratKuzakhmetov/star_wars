@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './CharactersPage.css';
 import { getCharactersThunk } from '../../redux/actions/characters';
 import CharactersList from '../CharactersList/CharactersList';
+import Loader from '../Loader/Loader';
 
 function CharactersPage() {
   const characters = useSelector((state) => state.characters);
@@ -16,12 +17,12 @@ function CharactersPage() {
     }
   }, []);
 
-  // console.log('characters', characters);
+  console.log('characters', characters);
 
   return (
     <div className="characters">
       {characters.length !== 82
-        ? <div>Loading...</div>
+        ? <Loader />
         : <CharactersList />}
     </div>
   );
