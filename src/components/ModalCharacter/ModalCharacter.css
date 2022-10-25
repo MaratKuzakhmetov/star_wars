@@ -173,8 +173,27 @@
 
 /* Tablet */
 @media (min-width: 660px) and (max-width: 850px) {
+  .modal__wrapper {
+    height: 300px;
+  }
   .modal__wrapper__data-info {
     width: 80%;
+  }
+
+  .modal__wrapper__data-dimensions {
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+  }
+
+  .modal-img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .modal__wrapper__info {
+    height: 302px;
   }
 }
 

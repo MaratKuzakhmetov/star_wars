@@ -54,26 +54,34 @@
 /* Tablet */
 @media (min-width: 680px) and (max-width: 1300px) {
   .error__container__text {
-    font-size: 350px;
-    line-height: 450px;
+    font-size: 220px;
+    line-height: 250px;
   }
 
   .error__container__image-img {
-    width: 400px;
-    top: 8%;
+    width: 220px;
+    top: 7%;
+  }
+
+  .error__container__btn-btn {
+    margin: 40px auto 0;
   }
 }
 
 /* Phone and Tablet */
 @media (min-width: 425px) and (max-width: 679px) {
   .error__container__text {
-    font-size: 220px;
-    line-height: 450px;
+    font-size: 110px;
+    line-height: 150px;
   }
 
   .error__container__image-img {
-    width: 220px;
-    top: 20%;
+    width: 110px;
+    top: 10%;
+  }
+
+  .error__container__btn-btn {
+    margin: 40px auto 0;
   }
 }
 
@@ -86,6 +94,10 @@
 
   .error__container__image-img {
     width: 150px;
-    top: 25%;
+    top: 29%;
+  }
+
+  .error__container__btn-btn {
+    margin: 40px auto 0;
   }
 }
