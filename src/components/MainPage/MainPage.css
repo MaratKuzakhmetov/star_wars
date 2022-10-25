@@ -105,18 +105,44 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 80%;
   }
 
   .main__intro {
     margin-left: 0;
+    align-items: center;
   }
 
   .main__images {
     position: relative;
-    width: 600px;
-    height: 678px;
-    top: -50%;
+    width: 250px;
+    height: 250px;
+    top: -70%;
     opacity: 0.2;
+    padding-top: 0;
+  }
+
+  .main__intro__title {
+    font-size: 36px;
+    line-height: 42px;
+    margin: 25px 0 0;
+    text-align: center;
+  }
+
+  .main__intro__subtitle {
+    font-size: 22px;
+    line-height: 37px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .main__intro__btn {
+    width: 200px;
+    margin-top: 25px;
+  }
+
+  .yoda {
+    width: 250px;
   }
 }
 
