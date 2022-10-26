@@ -12,7 +12,7 @@ I built this app to work with external API data.
 
 Some screenshots to show how app displays on mobile devices:
 
-![Screenshot](ReadmeImages/phone.png)
+![Screenshot](ReadmeImages/Phone.png)
 
 And on laptop. (Also there is one for the tablets, but it's too boring to arrange a readme file).
 
